@@ -9,7 +9,10 @@ import java.awt.Button;
 import java.awt.FlowLayout;
 import java.awt.GridBagLayout;
 import java.awt.GridLayout;
+import java.awt.TextField;
+import javax.swing.Box;
 import javax.swing.JButton;
+import javax.swing.JCheckBox;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
@@ -26,21 +29,46 @@ public class QuestionAdder extends javax.swing.JFrame {
      */
     JPanel pnla, pnlb;
     JPanel pnl;
+    Box btns;
+    int optCounter = 1;
     
     public QuestionAdder() {
         initComponents();
         setLocationRelativeTo(null);
         
-        pnl = new JPanel(new BorderLayout());
-        pnla = new JPanel(new GridLayout(0, 1, 5, 5));
-        pnlb = new JPanel(new GridLayout(0, 1, 5, 5));
-//        pnla = new JPanel(new GridBagLayout());
-//        pnlb = new JPanel(new GridBagLayout());
-           
-        pnl.add(pnla, BorderLayout.WEST);
-        pnl.add(pnlb, BorderLayout.CENTER);
         
-        jScrollPane1.setViewportView(pnl);
+//        pnla = new JPanel(new GridLayout(0, 1, 5, 5));
+//        pnlb = new JPanel(new GridLayout(0, 1, 5, 5));
+        
+           
+        btns = Box.createVerticalBox();
+//        for(int i=0; i<3; i++) btns.add(new JButton("button"));
+//        pnl.add(btns, BorderLayout.WEST);
+        
+        pnl = new JPanel();
+        pnl.setLayout(new BorderLayout());
+        pnl.add(btns, BorderLayout.NORTH);
+        scrl.setViewportView(pnl);
+        
+        
+//        jScrollPane1.setViewportView(pnl);
+//        pnl = pnl;
+        this.setLayout(new BorderLayout());
+//        this.validate();
+    }
+    
+    void init(){
+        JPanel frame = new JPanel(new BorderLayout());
+//        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        Box box = Box.createHorizontalBox();
+//        box.add(Box.createHorizontalGlue());
+        box.add(new JButton("Left"));
+        box.add(new JButton("Right"));
+        frame.add(box, BorderLayout.NORTH);
+        this.add(box);
+        add(new JButton("sssssss"));
+        pnl = frame;
+        this.validate();
     }
 
     /**
@@ -69,7 +97,7 @@ public class QuestionAdder extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jTextField10 = new javax.swing.JTextField();
-        jScrollPane1 = new javax.swing.JScrollPane();
+        scrl = new javax.swing.JScrollPane();
 
         jLabel3.setText("QName:");
 
@@ -97,36 +125,38 @@ public class QuestionAdder extends javax.swing.JFrame {
 
         jLabel10.setText("QText:");
 
-        jScrollPane1.setBorder(javax.swing.BorderFactory.createTitledBorder("options"));
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(250, 250, 250)
-                .addComponent(jButton1)
-                .addContainerGap(255, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(18, 18, 18)
-                        .addComponent(jTextField1))
+                        .addContainerGap()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel1)
+                                .addGap(18, 18, 18)
+                                .addComponent(jTextField1))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel6)
+                                    .addComponent(jLabel8)
+                                    .addComponent(jLabel9)
+                                    .addComponent(jLabel10))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jTextField6)
+                                    .addComponent(jTextField8)
+                                    .addComponent(jTextField9)
+                                    .addComponent(jTextField10)))))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel6)
-                            .addComponent(jLabel8)
-                            .addComponent(jLabel9)
-                            .addComponent(jLabel10))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField6)
-                            .addComponent(jTextField8)
-                            .addComponent(jTextField9)
-                            .addComponent(jTextField10)))
-                    .addComponent(jScrollPane1))
+                        .addGap(250, 250, 250)
+                        .addComponent(jButton1)
+                        .addGap(0, 343, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(scrl)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -154,21 +184,37 @@ public class QuestionAdder extends javax.swing.JFrame {
                     .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jButton1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 208, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(scrl, javax.swing.GroupLayout.DEFAULT_SIZE, 185, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+
+//        btns.add(new JButton("QOption:"));
+//        btns.add(new JLabel("QOption:"));
+//        btns.add(txt);
         
-        pnla.add(new JButton("QOption:"));
         JTextField txt = new JTextField();
-        txt.setSize(10, 1);
+        txt.setSize(txt.getPreferredSize());
+        txt.setSize(2, 2);
+        
+        Box b = Box.createHorizontalBox();
+        b.add(new JLabel("opt" + optCounter++));
+        b.add(Box.createHorizontalGlue());
+        b.add(txt);
+        b.add(Box.createHorizontalGlue());
+        b.add(new JCheckBox());
+        b.add(Box.createHorizontalGlue());
+        b.add(new JButton("X"));
+        
+        btns.add(b);
         
 //        txt.setColumns(10);
-        pnlb.add(txt);
+//        pnlb.add(txt);
         
 //        pnl.repaint();
 //        pnl.validate();
@@ -220,7 +266,6 @@ public class QuestionAdder extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField3;
@@ -229,5 +274,6 @@ public class QuestionAdder extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
     private javax.swing.JTextField jTextField9;
+    private javax.swing.JScrollPane scrl;
     // End of variables declaration//GEN-END:variables
 }
