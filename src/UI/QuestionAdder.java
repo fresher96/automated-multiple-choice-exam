@@ -5,8 +5,11 @@
 package UI;
 
 import java.awt.BorderLayout;
+import java.awt.Button;
 import java.awt.FlowLayout;
+import java.awt.GridBagLayout;
 import java.awt.GridLayout;
+import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
@@ -21,26 +24,23 @@ public class QuestionAdder extends javax.swing.JFrame {
     /**
      * Creates new form QuestionAdder
      */
+    JPanel pnla, pnlb;
     JPanel pnl;
     
     public QuestionAdder() {
         initComponents();
         setLocationRelativeTo(null);
         
-        jPanel1.setLayout(new BorderLayout());
+        pnl = new JPanel(new BorderLayout());
+        pnla = new JPanel(new GridLayout(0, 1, 5, 5));
+        pnlb = new JPanel(new GridLayout(0, 1, 5, 5));
+//        pnla = new JPanel(new GridBagLayout());
+//        pnlb = new JPanel(new GridBagLayout());
+           
+        pnl.add(pnla, BorderLayout.WEST);
+        pnl.add(pnlb, BorderLayout.CENTER);
         
-        pnl = new JPanel(new FlowLayout());
-        jPanel1.add( pnl , BorderLayout.CENTER);
-//        jPanel1.add( new JScrollPane(pnl), BorderLayout.CENTER);
-//        pnl.add(new JLabel("QOption:"));
-////        jPanel1.add
-//        JTextField txt = new JTextField();
-//        txt.setColumns(45);
-//        
-//        jPanel1.add(txt);
-//        jPanel1.repaint();
-//        this.validate();
-//        this.setLayout(null);
+        jScrollPane1.setViewportView(pnl);
     }
 
     /**
@@ -61,7 +61,6 @@ public class QuestionAdder extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         jButton1 = new javax.swing.JButton();
-        jPanel1 = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         jTextField6 = new javax.swing.JTextField();
         jTextField8 = new javax.swing.JTextField();
@@ -70,6 +69,7 @@ public class QuestionAdder extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jTextField10 = new javax.swing.JTextField();
+        jScrollPane1 = new javax.swing.JScrollPane();
 
         jLabel3.setText("QName:");
 
@@ -89,19 +89,6 @@ public class QuestionAdder extends javax.swing.JFrame {
             }
         });
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Options:"));
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 185, Short.MAX_VALUE)
-        );
-
         jLabel6.setText("QDifficulty:");
 
         jLabel8.setText("QType:");
@@ -109,6 +96,8 @@ public class QuestionAdder extends javax.swing.JFrame {
         jLabel9.setText("QMark:");
 
         jLabel10.setText("QText:");
+
+        jScrollPane1.setBorder(javax.swing.BorderFactory.createTitledBorder("options"));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -137,7 +126,7 @@ public class QuestionAdder extends javax.swing.JFrame {
                             .addComponent(jTextField8)
                             .addComponent(jTextField9)
                             .addComponent(jTextField10)))
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jScrollPane1))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -166,24 +155,25 @@ public class QuestionAdder extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jButton1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 208, Short.MAX_VALUE))
         );
-
-        jPanel1.getAccessibleContext().setAccessibleParent(null);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        pnl.add(new JLabel("QOption:"));
-//        jPanel1.add
-        JTextField txt = new JTextField();
-        txt.setColumns(45);
         
-        pnl.add(txt);
+        pnla.add(new JButton("QOption:"));
+        JTextField txt = new JTextField();
+        txt.setSize(10, 1);
+        
+//        txt.setColumns(10);
+        pnlb.add(txt);
+        
 //        pnl.repaint();
-        pnl.validate();
+//        pnl.validate();
+        this.validate();
+//        jScrollPane1.validate();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
@@ -230,7 +220,7 @@ public class QuestionAdder extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField10;
     private javax.swing.JTextField jTextField3;
