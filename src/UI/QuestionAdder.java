@@ -19,6 +19,8 @@ public class QuestionAdder extends javax.swing.JFrame {
     public QuestionAdder() {
         initComponents();
         setLocationRelativeTo(null);
+        setVisible(true);
+        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         
         // adding components to scrl
         boxOpt = Box.createVerticalBox();
@@ -67,6 +69,8 @@ public class QuestionAdder extends javax.swing.JFrame {
         });
 
         jLabel8.setText("QType:");
+
+        scrl.setBorder(javax.swing.BorderFactory.createTitledBorder("options"));
 
         jLabel9.setText("QMark:");
 
@@ -142,8 +146,8 @@ public class QuestionAdder extends javax.swing.JFrame {
                         .addComponent(btnAddOpt, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(btnAddQues))
                     .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addGap(18, 18, 18)
-                .addComponent(scrl, javax.swing.GroupLayout.DEFAULT_SIZE, 194, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(scrl, javax.swing.GroupLayout.DEFAULT_SIZE, 201, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -199,13 +203,13 @@ public class QuestionAdder extends javax.swing.JFrame {
         }
         
         // handling options
-        String[] opt = new String[txtOpt.size()];
-        boolean[] isCor = new boolean[chkOpt.size()];
+        ArrayList<String> opt = new ArrayList();
+        ArrayList<Boolean> isCor = new ArrayList();
         int corrCount = 0;
-        for(int i=0; i<opt.length; i++){
-            opt[i] = txtOpt.get(i).getText();
-            isCor[i] = chkOpt.get(i).isSelected();
-            corrCount += isCor[i]? 1 : 0;
+        for(int i=0; i<txtOpt.size(); i++){
+            opt.add( txtOpt.get(i).getText() );
+            isCor.add( chkOpt.get(i).isSelected() );
+            corrCount += isCor.get(i)? 1 : 0;
         }
         
         if(!q.setOptions(opt, isCor))
@@ -228,6 +232,7 @@ public class QuestionAdder extends javax.swing.JFrame {
         
         IO.writeQuestion(q);
         Handler.not("question added successfuly");
+        dispose();
     }//GEN-LAST:event_btnAddQuesActionPerformed
 
     Integer readInt(String input, String name){

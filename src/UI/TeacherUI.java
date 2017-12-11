@@ -4,7 +4,11 @@
  */
 package UI;
 
+import class_library.Handler;
+import class_library.IO;
+import class_library.Question;
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 
 /**
  *
@@ -48,6 +52,11 @@ public class TeacherUI extends javax.swing.JFrame {
         });
 
         btnTry.setText("try");
+        btnTry.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTryActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -80,10 +89,27 @@ public class TeacherUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
-        // TODO add your handling code here:
-        QuestionAdder qa = new QuestionAdder();
-        qa.setVisible(true);
+        new QuestionAdder();
     }//GEN-LAST:event_btnAddActionPerformed
+
+    private void btnTryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTryActionPerformed
+        JFrame frame = new JFrame("last question added");
+        
+        Question q = IO.readLastQuestion();
+        if(q == null)
+        {
+            Handler.err("question bank is empty");
+            return;
+        }
+        
+        JPanel pnl = new JPanel();
+//        Handler.ques2pnl(q, pnl);
+        frame.setContentPane(pnl);
+        
+        frame.setLocationRelativeTo(null);
+        frame.setVisible(true);
+        frame.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+    }//GEN-LAST:event_btnTryActionPerformed
 
     /**
      * @param args the command line arguments

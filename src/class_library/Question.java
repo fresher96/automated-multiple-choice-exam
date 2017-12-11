@@ -4,6 +4,8 @@
  */
 package class_library;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Farouk
@@ -12,10 +14,26 @@ public class Question {
 //    static final int EASY = 1, MEDIUM = 2, HARD = 3;
     public static final int SINGLE = 1, MULTIPLE = 2;
     
-    String name, text;
-    int diff, type, mark;
-    String[] opt;
-    boolean[] isCor;
+    public String name, text;
+    public int diff, type, mark;
+    public ArrayList<String> opt;
+    public ArrayList<Boolean> isCor;
+    
+    public boolean setOptions(ArrayList<String> opt, ArrayList<Boolean> isCor){
+        
+        assert(opt.size() == isCor.size());
+        
+        for(int i=0; i<opt.size(); i++)
+        {
+            if(opt.get(i).equals("")){
+                return false;
+            }
+        }
+        
+        this.opt = opt;
+        this.isCor = isCor;
+        return true;
+    }
     
     public boolean setName(String name){
         if(name.equals("")) {
@@ -56,21 +74,6 @@ public class Question {
         
         // note that mark can be > 100
         this.mark = mark;
-        return true;
-    }
-    public boolean setOptions(String[] opt, boolean[] isCor){
-        
-        assert(opt.length == isCor.length);
-        
-        for(int i=0; i<opt.length; i++)
-        {
-            if(opt[i].equals("")){
-                return false;
-            }
-        }
-        
-        this.opt = opt;
-        this.isCor = isCor;
         return true;
     }
 }

@@ -5,6 +5,7 @@
 package class_library;
 
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 
 /**
  *
@@ -36,5 +37,19 @@ public class Handler {
         
         JOptionPane.showMessageDialog(null, message, "Exception thrown", JOptionPane.ERROR_MESSAGE);
         System.exit(0);
+    }
+    
+    public static void debug(Object obj){
+        JOptionPane.showMessageDialog(null, "\"" + obj.toString() + "\"");
+    }
+    
+    public static Integer readInt(String input, String name){
+        try{
+            return Integer.parseInt(input);
+        }
+        catch(Exception ex){
+            Handler.err(name + " must hold an integer value");
+            return null;
+        }
     }
 }
