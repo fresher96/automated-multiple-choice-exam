@@ -17,6 +17,7 @@ public class TeacherUI extends javax.swing.JFrame {
      */
     public TeacherUI() {
         initComponents();
+        setLocationRelativeTo(null);
         setResizable(false);
     }
 
@@ -34,6 +35,7 @@ public class TeacherUI extends javax.swing.JFrame {
         btnTry = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("welcome");
 
         jLabel1.setFont(new java.awt.Font("Tempus Sans ITC", 0, 24)); // NOI18N
         jLabel1.setText("welcome");
@@ -81,8 +83,6 @@ public class TeacherUI extends javax.swing.JFrame {
         // TODO add your handling code here:
         QuestionAdder qa = new QuestionAdder();
         qa.setVisible(true);
-        qa.setLocationRelativeTo(null);
-        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
     }//GEN-LAST:event_btnAddActionPerformed
 
     /**
