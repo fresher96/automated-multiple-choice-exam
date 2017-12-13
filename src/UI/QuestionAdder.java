@@ -178,7 +178,7 @@ public class QuestionAdder extends javax.swing.JFrame {
             return;
         }
         
-        Integer diff = readInt(txtDiff.getText(), "QDifficulty");
+        Integer diff = Handler.readInt(txtDiff.getText(), "QDifficulty");
         if(diff == null) return;
         if(!q.setDiff(diff))
         {
@@ -186,7 +186,7 @@ public class QuestionAdder extends javax.swing.JFrame {
             return;
         }
         
-        Integer type = readInt(txtType.getText(), "QType");
+        Integer type = Handler.readInt(txtType.getText(), "QType");
         if(type == null) return;
         if(!q.setType(type))
         {
@@ -194,7 +194,7 @@ public class QuestionAdder extends javax.swing.JFrame {
             return;
         }
         
-        Integer mark = readInt(txtMark.getText(), "QMark");
+        Integer mark = Handler.readInt(txtMark.getText(), "QMark");
         if(mark == null) return;
         if(!q.setMark(mark))
         {
@@ -235,16 +235,6 @@ public class QuestionAdder extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_btnAddQuesActionPerformed
 
-    Integer readInt(String input, String name){
-        try{
-            return Integer.parseInt(input);
-        }
-        catch(Exception ex){
-            Handler.err(name + " must hold an integer value");
-            return null;
-        }
-    }
-    
     void deleteOption(int idx){
         txtOpt.remove(idx);
         chkOpt.remove(idx);

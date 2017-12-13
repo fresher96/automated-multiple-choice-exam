@@ -93,8 +93,7 @@ public class TeacherUI extends javax.swing.JFrame {
     }//GEN-LAST:event_btnAddActionPerformed
 
     private void btnTryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTryActionPerformed
-        JFrame frame = new JFrame("last question added");
-        
+
         Question q = IO.readLastQuestion();
         if(q == null)
         {
@@ -102,13 +101,7 @@ public class TeacherUI extends javax.swing.JFrame {
             return;
         }
         
-        JPanel pnl = new JPanel();
-//        Handler.ques2pnl(q, pnl);
-        frame.setContentPane(pnl);
-        
-        frame.setLocationRelativeTo(null);
-        frame.setVisible(true);
-        frame.setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+        new QuestionViewer(q);
     }//GEN-LAST:event_btnTryActionPerformed
 
     /**

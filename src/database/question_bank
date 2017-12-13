@@ -71,6 +71,15 @@ QOption: 1 (T)
 QOption: 1
 %%
 QName: valid keywords
+QDifficulty: 3
+QType: 2
+QMark: 1000
+QText: whattt????
+QOption: String (T)
+QOption: Int
+QOption: double (T)
+%%
+QName: valid keywords
 QDifficulty: 1
 QType: 2
 QMark: 10
@@ -82,14 +91,5 @@ QOption: asljdf
 QOption: lasjdf
 QOption: Int
 QOption: aaa
-QOption: double (T)
-%%
-QName: valid keywords
-QDifficulty: 3
-QType: 2
-QMark: 1000
-QText: whattt????
-QOption: String (T)
-QOption: Int
 QOption: double (T)
 %%
