@@ -4,6 +4,17 @@
  */
 package UI;
 
+import class_library.Handler;
+import class_library.PanelGen;
+import class_library.Question;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import javax.swing.JButton;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.JToggleButton;
+
 /**
  *
  * @author Farouk
@@ -13,12 +24,57 @@ public class Exam extends javax.swing.JFrame {
     /**
      * Creates new form Exam
      */
+    ArrayList<Question> ques;
+    ArrayList< ArrayList<JToggleButton> > chks;
+    double score = 0;
+    
     public Exam() {
         initComponents();
         setLocationRelativeTo(null);
         setVisible(true);
         // toDoStuff
         setResizable(true);
+    }
+    
+    void populateOptions(int i){
+        lbl.setText(ques.get(i).text);
+        JPanel pnl = PanelGen.getPnl( PanelGen.cast(chks.get(i)) );
+        scrlOpt.setViewportView(pnl);
+    }
+    
+    void populateQuestions(){
+        ArrayList <JButton> btns = new ArrayList<>();
+        for(int i=0; i<ques.size(); i++)
+        {
+            final Question q = ques.get(i);
+            
+            JButton btn = new JButton(String.format("Question %d: %s", i+1, q.name));
+            btns.add(btn);
+            
+            final int j = i;
+            btn.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    populateOptions(j);
+                }
+            });
+        }
+        
+        JPanel pnl = PanelGen.getPnl( PanelGen.cast(btns) );
+        scrlQues.setViewportView(pnl);
+    }
+    
+    public Exam(ArrayList<Question> ques) {
+        this();
+        
+        this.ques = ques;
+        chks = new ArrayList<>();
+        for(Question q : ques){
+            ArrayList<JToggleButton> opts = new ArrayList<>();
+            PanelGen.getPnl(q, opts);
+            chks.add( opts );
+        }
+        populateQuestions();
     }
 
     /**
@@ -30,17 +86,28 @@ public class Exam extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        scrlQ = new javax.swing.JScrollPane();
+        scrlOpt = new javax.swing.JScrollPane();
         btnSubmit = new javax.swing.JButton();
-        scrlQ1 = new javax.swing.JScrollPane();
+        scrlQues = new javax.swing.JScrollPane();
+        lbl = new javax.swing.JLabel();
+        btnValidate = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        scrlQ.setBorder(javax.swing.BorderFactory.createTitledBorder("Options"));
+        scrlOpt.setBorder(javax.swing.BorderFactory.createTitledBorder("Options"));
 
         btnSubmit.setText("submit");
+        btnSubmit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSubmitActionPerformed(evt);
+            }
+        });
 
-        scrlQ1.setBorder(javax.swing.BorderFactory.createTitledBorder("Questions"));
+        scrlQues.setBorder(javax.swing.BorderFactory.createTitledBorder("Questions"));
+
+        lbl.setText("choose question to proceed");
+
+        btnValidate.setText("validate");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -49,34 +116,52 @@ public class Exam extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(161, 161, 161)
                 .addComponent(btnSubmit)
-                .addContainerGap(205, Short.MAX_VALUE))
+                .addContainerGap(182, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(scrlQ, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(scrlOpt, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap())
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(lbl)
+                        .addGap(55, 55, 55))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(btnValidate)
+                        .addGap(80, 80, 80))))
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addGap(20, 20, 20)
-                    .addComponent(scrlQ1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(309, Short.MAX_VALUE)))
+                    .addComponent(scrlQues, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(223, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(83, 83, 83)
-                .addComponent(scrlQ, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 116, Short.MAX_VALUE)
+                .addGap(16, 16, 16)
+                .addComponent(lbl)
+                .addGap(18, 18, 18)
+                .addComponent(scrlOpt, javax.swing.GroupLayout.PREFERRED_SIZE, 211, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnValidate)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 11, Short.MAX_VALUE)
                 .addComponent(btnSubmit)
                 .addContainerGap())
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
-                    .addGap(84, 84, 84)
-                    .addComponent(scrlQ1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(149, Short.MAX_VALUE)))
+                    .addContainerGap()
+                    .addComponent(scrlQues, javax.swing.GroupLayout.PREFERRED_SIZE, 246, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(76, Short.MAX_VALUE)))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
+        String res = String.format("your score is: %.2f%%", score);
+        Handler.not(res);
+        dispose();
+    }//GEN-LAST:event_btnSubmitActionPerformed
 
     /**
      * @param args the command line arguments
@@ -114,7 +199,9 @@ public class Exam extends javax.swing.JFrame {
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnSubmit;
-    private javax.swing.JScrollPane scrlQ;
-    private javax.swing.JScrollPane scrlQ1;
+    private javax.swing.JButton btnValidate;
+    private javax.swing.JLabel lbl;
+    private javax.swing.JScrollPane scrlOpt;
+    private javax.swing.JScrollPane scrlQues;
     // End of variables declaration//GEN-END:variables
 }

@@ -48,7 +48,7 @@ public class Handler {
             return Integer.parseInt(input);
         }
         catch(Exception ex){
-            Handler.err(name + " must hold an integer value");
+            err(name + " must hold an integer value");
             return null;
         }
     }

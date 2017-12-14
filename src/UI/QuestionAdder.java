@@ -10,26 +10,28 @@ import javax.swing.*;
 public class QuestionAdder extends javax.swing.JFrame {
     
     // options variables
-    Box boxOpt;
     ArrayList<JTextField> txtOpt = new ArrayList();
     ArrayList<JCheckBox> chkOpt = new ArrayList();
     ArrayList<JButton> btnOpt = new ArrayList();
     
+    void updateOptions(){
+        
+        ArrayList<JLabel> lblOpt = new ArrayList<>();
+        for(int i=0; i<txtOpt.size(); i++){
+            lblOpt.add(new JLabel("opt" + (i+1)));
+        }
+        
+        JPanel pnl = PanelGen.getPnl(PanelGen.cast(lblOpt), PanelGen.cast(txtOpt),
+                                     PanelGen.cast(chkOpt), PanelGen.cast(btnOpt));
+        
+        scrl.setViewportView(pnl);
+    }
     
     public QuestionAdder() {
         initComponents();
         setLocationRelativeTo(null);
         setVisible(true);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
-        
-        // adding components to scrl
-        boxOpt = Box.createVerticalBox();
-        
-        JPanel pnl = new JPanel();
-        pnl.setLayout(new BorderLayout());
-        pnl.add(boxOpt, BorderLayout.NORTH);
-        
-        scrl.setViewportView(pnl);
         
         // add two default options
         btnAddOptActionPerformed(null);
@@ -157,9 +159,17 @@ public class QuestionAdder extends javax.swing.JFrame {
     private void btnAddOptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddOptActionPerformed
         txtOpt.add(new JTextField());
         chkOpt.add(new JCheckBox());
-        btnOpt.add(new JButton("X"));
+        final JButton btn = new JButton("X");
+        btnOpt.add(btn);
         
-        addOption(txtOpt.size()-1);
+        btn.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                deleteOption(btn);
+            }
+        });
+        
+        updateOptions();
     }//GEN-LAST:event_btnAddOptActionPerformed
 
     private void btnAddQuesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddQuesActionPerformed
@@ -235,49 +245,13 @@ public class QuestionAdder extends javax.swing.JFrame {
         dispose();
     }//GEN-LAST:event_btnAddQuesActionPerformed
 
-    void deleteOption(int idx){
+    void deleteOption(JButton btn){
+        int idx = btnOpt.indexOf(btn);
         txtOpt.remove(idx);
         chkOpt.remove(idx);
         btnOpt.remove(idx);
         
-        populate();
-    }
-    
-    void populate(){
-        boxOpt.removeAll();
-        for(int i=0; i<txtOpt.size(); i++) {
-            addOption(i);
-        }
-        this.validate();
-    }
-    
-    void addOption(final int idx){
-        
-        Box horBox = Box.createHorizontalBox();
-        horBox.add( new JLabel("opt" + (idx+1) ) );
-        horBox.add(txtOpt.get(idx));
-        horBox.add(chkOpt.get(idx));
-        horBox.add(btnOpt.get(idx));
-        
-        boxOpt.add(horBox);
-        this.validate();
-        
-        final JButton btn = btnOpt.get(idx);
-        removeActionListners(btn);
-        btn.addActionListener(new ActionListener() {
-            int index = idx;
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                deleteOption(index);
-            }
-        });
-    }
-    
-    void removeActionListners(JButton btn){
-        ActionListener[] arr = btn.getActionListeners();
-        for(ActionListener al : arr){
-            btn.removeActionListener(al);
-        }
+        updateOptions();
     }
     
     public static void main(String args[]) {

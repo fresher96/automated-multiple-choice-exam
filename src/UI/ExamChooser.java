@@ -103,6 +103,7 @@ public class ExamChooser extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        
         Integer diff = Handler.readInt(txtDiff.getText(), "difficulty");
         if(diff == null) return;
         if( !new Question().setDiff(diff) )
@@ -127,14 +128,17 @@ public class ExamChooser extends javax.swing.JFrame {
         }
         shuffle(ques, nbr);
         
-        // toDoStuff
-//        new Exam(ques);
+        
+        new Exam(ques);
         dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     void shuffle(ArrayList<Question> ques, int nbr){
         Collections.shuffle(ques);
-        ques = (ArrayList<Question>) ques.subList(0, nbr);
+        // todostuff
+        for(int i=ques.size()-1; i>=nbr; i--) ques.remove(i);
+//        ques = (ArrayList<Question>) ques.subList(0, nbr);
+//        Handler.debug(ques.size());
     }
     /**
      * @param args the command line arguments
