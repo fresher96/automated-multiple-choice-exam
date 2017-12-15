@@ -1,0 +1,560 @@
+QName: Question#0
+QDifficulty: 1
+QType: 1
+QMark: 10
+QText: What is the minimum number of options in this Miniproject?
+QOption: 2 (T)
+QOption: 3
+QOption: 4
+%%
+QName: Question #1
+QDifficulty: 1
+QType: 2
+QMark: 10
+QText: Select the movies in which Tom Hanks acted:
+QOption: Forrest Gump (T)
+QOption: Sausage party
+QOption: Apollo 13 (T)
+QOption: The 13th Warrior
+QOption: Saving Private Rayan (T)
+%%
+QName: Question #2
+QDifficulty: 1
+QType: 1
+QMark: 10
+QText: If today is Jan, 10, then tomorrow is:
+QOption: Jan, 11 (T)
+QOption: Jan, 9
+%%
+QName: Question #3
+QDifficulty: 1
+QType: 1
+QMark: 10
+QText: If today is Jan, 10, then yesterday was:
+QOption:  Jan, 11
+QOption:  Jan, 9 (T)
+%%
+QName: Question #4
+QDifficulty: 1
+QType: 2
+QMark: 10
+QText: The following letters are to the right of the letter I in QWERTY keyboard
+QOption: The letter J
+QOption: The letter O (T)
+QOption: The letter K
+QOption: The letter P (T)
+%%
+QName: Question #5
+QDifficulty: 1
+QType: 1
+QMark: 10
+QText: The exact name of the Tom hanks is
+QOption: Tomy Hanks
+QOption: Thomas Hanks (T)
+%%
+QName: Question #6
+QDifficulty: 1
+QType: 1
+QMark: 10
+QText: The release date of the famous film "The Green Mile" released in:
+QOption: 1999 (T)
+QOption: 1996
+QOption: 2001
+%%
+QName: Question #7
+QDifficulty: 1
+QType: 2
+QMark: 10
+QText: The word "agora" (Ancient Greek) means
+QOption: Gathering place (T)
+QOption: The God
+QOption: The oracle
+QOption: Assembly (T)
+%%
+QName: Question #8
+QDifficulty: 1
+QType: 2
+QMark: 10
+QText: The following words are usable keywords in java
+QOption: while (T)
+QOption: Int
+QOption: goto
+QOption: double (T)
+%%
+QName: Question #9
+QDifficulty: 1
+QType: 1
+QMark: 10
+QText: My name is
+QOption: Alhasan Alkhaddour (T)
+QOption: Hassan Khaddour
+QOption: Alex
+%%
+QName: Question 10
+QDifficulty: 1
+QType: 1
+QMark: 10
+QText: ARP stands for
+QOption: Address Resolution Protocol (T)
+QOption: Acquiring Random Packet
+%%
+QName: Question 11
+QDifficulty: 1
+QType: 1
+QMark: 10
+QText: IMDb stands for
+QOption: Internet Messaging Data Buffer
+QOption: Internet Movie Database (T)
+%%
+QName: Question #12
+QDifficulty: 1
+QType: 1
+QMark: 10
+QText: MBA stands for
+QOption: Mistakes of British Airways
+QOption: Military Bank of Armenia
+QOption: Master of Business Adminstration (T)
+%%
+QName: Qusestion #13
+QDifficulty: 1
+QType: 1
+QMark: 10
+QText: "Bell Labs" named after
+QOption: Tobin Bell
+QOption: Steve Bell
+QOption: Kristen Bell
+QOption: Alexander Graham Bell (T)
+%%
+QName: Question #14
+QDifficulty: 1
+QType: 2
+QMark: 10
+QText: The following letters are vowels
+QOption: G
+QOption: U (T)
+QOption: I (T)
+%%
+QName: Question #15
+QDifficulty: 1
+QType: 1
+QMark: 10
+QText: The number of mouse buttons is
+QOption: 1
+QOption: 2 (T)
+QOption: 3
+%%
+QName: Question #16
+QDifficulty: 1
+QType: 2
+QMark: 10
+QText: If today is Feb, 28 then tomorrow might be
+QOption: Feb, 29 (T)
+QOption: Mar, 1 (T)
+%%
+QName: Question #17
+QDifficulty: 1
+QType: 2
+QMark: 10
+QText: Instagram is used to share
+QOption: Videos (T)
+QOption: Books
+QOption: Pictures (T)
+%%
+QName: Question #18
+QDifficulty: 1
+QType: 1
+QMark: 10
+QText: The computer scientest who proved that a general algorithm to solve the halting problem for all possible program-input pairs cannot exist is
+QOption: Charles Babbage
+QOption: John von Neumann
+QOption: Grace Hopper
+QOption: Alan Turing (T)
+%%
+QName: Question #19
+QDifficulty: 1
+QType: 2
+QMark: 10
+QText: An English comic actor, filmmaker, and composer who rose to fame in the era of silent film is
+QOption: Jack Nicholson 
+QOption: Charlie Chaplin (T)
+QOption: Anthony Hopkins 
+%%
+QName: Question 20
+QDifficulty: 1
+QType: 2
+QMark: 10
+QText: something students hate very much
+QOption: Tests :) (T)
+QOption: Surprising Tests :) (T)
+QOption: Hard Tests (T)
+%%
+QName: Question #21
+QDifficulty: 2
+QType: 2
+QMark: 10
+QText: Select the movies in which Tom Hanks acted:
+QOption: Forrest Gump (T)
+QOption: Sausage party
+QOption: Apollo 13 (T)
+QOption: The 13th Warrior
+QOption: Saving Private Rayan (T)
+%%
+QName: Question #22
+QDifficulty: 2
+QType: 1
+QMark: 10
+QText: If today is Jan, 10, then tomorrow is:
+QOption: Jan, 11 (T)
+QOption: Jan, 9
+%%
+QName: Question #23
+QDifficulty: 2
+QType: 1
+QMark: 10
+QText: If today is Jan, 10, then yesterday was:
+QOption:  Jan, 11
+QOption:  Jan, 9 (T)
+%%
+QName: Question #24
+QDifficulty: 2
+QType: 2
+QMark: 10
+QText: The following letters are to the right of the letter I in QWERTY keyboard
+QOption: The letter J
+QOption: The letter O (T)
+QOption: The letter K
+QOption: The letter P (T)
+%%
+QName: Question #25
+QDifficulty: 2
+QType: 1
+QMark: 10
+QText: The exact name of the Tom hanks is
+QOption: Tomy Hanks
+QOption: Thomas Hanks (T)
+%%
+QName: Question #26
+QDifficulty: 2
+QType: 1
+QMark: 10
+QText: The release date of the famous film "The Green Mile" released in:
+QOption: 1999 (T)
+QOption: 1996
+QOption: 2001
+%%
+QName: Question #27
+QDifficulty: 2
+QType: 2
+QMark: 10
+QText: The word "agora" (Ancient Greek) means
+QOption: Gathering place (T)
+QOption: The God
+QOption: The oracle
+QOption: Assembly (T)
+%%
+QName: Question #28
+QDifficulty: 2
+QType: 2
+QMark: 10
+QText: The following words are usable keywords in java
+QOption: while (T)
+QOption: Int
+QOption: goto
+QOption: double (T)
+%%
+QName: Question #29
+QDifficulty: 2
+QType: 1
+QMark: 10
+QText: My name is
+QOption: Alhasan Alkhaddour (T)
+QOption: Hassan Khaddour
+QOption: Alex
+%%
+QName: Question 30
+QDifficulty: 2
+QType: 1
+QMark: 10
+QText: ARP stands for
+QOption: Address Resolution Protocol (T)
+QOption: Acquiring Random Packet
+%%
+QName: Question 31
+QDifficulty: 2
+QType: 1
+QMark: 10
+QText: IMDb stands for
+QOption: Internet Messaging Data Buffer
+QOption: Internet Movie Database (T)
+%%
+QName: Question #32
+QDifficulty: 2
+QType: 1
+QMark: 10
+QText: MBA stands for
+QOption: Mistakes of British Airways
+QOption: Military Bank of Armenia
+QOption: Master of Business Adminstration (T)
+%%
+QName: Qusestion #33
+QDifficulty: 2
+QType: 1
+QMark: 10
+QText: "Bell Labs" named after
+QOption: Tobin Bell
+QOption: Steve Bell
+QOption: Kristen Bell
+QOption: Alexander Graham Bell (T)
+%%
+QName: Question #34
+QDifficulty: 2
+QType: 2
+QMark: 10
+QText: The following letters are vowels
+QOption: G
+QOption: U (T)
+QOption: I (T)
+%%
+QName: Question #35
+QDifficulty: 2
+QType: 1
+QMark: 10
+QText: The number of mouse buttons is
+QOption: 1
+QOption: 2 (T)
+QOption: 3
+%%
+QName: Question #36
+QDifficulty: 2
+QType: 2
+QMark: 10
+QText: If today is Feb, 28 then tomorrow might be
+QOption: Feb, 29 (T)
+QOption: Mar, 1 (T)
+%%
+QName: Question #37
+QDifficulty: 2
+QType: 2
+QMark: 10
+QText: Instagram is used to share
+QOption: Videos (T)
+QOption: Books
+QOption: Pictures (T)
+%%
+QName: Question #38
+QDifficulty: 2
+QType: 1
+QMark: 10
+QText: The computer scientest who proved that a general algorithm to solve the halting problem for all possible program-input pairs cannot exist is
+QOption: Charles Babbage
+QOption: John von Neumann
+QOption: Grace Hopper
+QOption: Alan Turing (T)
+%%
+QName: Question #39
+QDifficulty: 2
+QType: 2
+QMark: 10
+QText: An English comic actor, filmmaker, and composer who rose to fame in the era of silent film is
+QOption: Jack Nicholson 
+QOption: Charlie Chaplin (T)
+QOption: Anthony Hopkins 
+%%
+QName: Question 40
+QDifficulty: 2
+QType: 2
+QMark: 10
+QText: something students hate very much
+QOption: Tests :) (T)
+QOption: Surprising Tests :) (T)
+QOption: Hard Tests (T)
+%%
+QName: Question#41
+QDifficulty: 3
+QType: 1
+QMark: 10
+QText: What is the minimum number of options in this Miniproject?
+QOption: 2 (T)
+QOption: 3
+QOption: 4
+%%
+QName: Question#42
+QDifficulty: 3
+QType: 1
+QMark: 10
+QText: What is the minimum number of options in this Miniproject?
+QOption: 2 (T)
+QOption: 3
+QOption: 4
+%%
+QName: Question #43
+QDifficulty: 3
+QType: 2
+QMark: 10
+QText: Select the movies in which Tom Hanks acted:
+QOption: Forrest Gump (T)
+QOption: Sausage party
+QOption: Apollo 13 (T)
+QOption: The 13th Warrior
+QOption: Saving Private Rayan (T)
+%%
+QName: Question #44
+QDifficulty: 3
+QType: 1
+QMark: 10
+QText: If today is Jan, 10, then tomorrow is:
+QOption: Jan, 11 (T)
+QOption: Jan, 9
+%%
+QName: Question #45
+QDifficulty: 3
+QType: 1
+QMark: 10
+QText: If today is Jan, 10, then yesterday was:
+QOption:  Jan, 11
+QOption:  Jan, 9 (T)
+%%
+QName: Question #46
+QDifficulty: 3
+QType: 2
+QMark: 10
+QText: The following letters are to the right of the letter I in QWERTY keyboard
+QOption: The letter J
+QOption: The letter O (T)
+QOption: The letter K
+QOption: The letter P (T)
+%%
+QName: Question #47
+QDifficulty: 3
+QType: 1
+QMark: 10
+QText: The exact name of the Tom hanks is
+QOption: Tomy Hanks
+QOption: Thomas Hanks (T)
+%%
+QName: Question #48
+QDifficulty: 3
+QType: 1
+QMark: 10
+QText: The release date of the famous film "The Green Mile" released in:
+QOption: 1999 (T)
+QOption: 1996
+QOption: 2001
+%%
+QName: Question #49
+QDifficulty: 3
+QType: 2
+QMark: 10
+QText: The word "agora" (Ancient Greek) means
+QOption: Gathering place (T)
+QOption: The God
+QOption: The oracle
+QOption: Assembly (T)
+%%
+QName: Question #50
+QDifficulty: 3
+QType: 2
+QMark: 10
+QText: The following words are usable keywords in java
+QOption: while (T)
+QOption: Int
+QOption: goto
+QOption: double (T)
+%%
+QName: Question #51
+QDifficulty: 3
+QType: 1
+QMark: 10
+QText: My name is
+QOption: Alhasan Alkhaddour (T)
+QOption: Hassan Khaddour
+QOption: Alex
+%%
+QName: Question #52
+QDifficulty: 3
+QType: 1
+QMark: 10
+QText: ARP stands for
+QOption: Address Resolution Protocol (T)
+QOption: Acquiring Random Packet
+%%
+QName: Question #53
+QDifficulty: 3
+QType: 1
+QMark: 10
+QText: IMDb stands for
+QOption: Internet Messaging Data Buffer
+QOption: Internet Movie Database (T)
+%%
+QName: Question #54
+QDifficulty: 3
+QType: 1
+QMark: 10
+QText: MBA stands for
+QOption: Mistakes of British Airways
+QOption: Military Bank of Armenia
+QOption: Master of Business Adminstration (T)
+%%
+QName: Qusestion #55
+QDifficulty: 3
+QType: 1
+QMark: 10
+QText: "Bell Labs" named after
+QOption: Tobin Bell
+QOption: Steve Bell
+QOption: Kristen Bell
+QOption: Alexander Graham Bell (T)
+%%
+QName: Question #56
+QDifficulty: 3
+QType: 2
+QMark: 10
+QText: The following letters are vowels
+QOption: G
+QOption: U (T)
+QOption: I (T)
+%%
+QName: Question #57
+QDifficulty: 3
+QType: 1
+QMark: 10
+QText: The number of mouse buttons is
+QOption: 1
+QOption: 2 (T)
+QOption: 3
+%%
+QName: Question #58
+QDifficulty: 3
+QType: 2
+QMark: 10
+QText: If today is Feb, 28 then tomorrow might be
+QOption: Feb, 29 (T)
+QOption: Mar, 1 (T)
+%%
+QName: Question #59
+QDifficulty: 3
+QType: 2
+QMark: 10
+QText: Instagram is used to share
+QOption: Videos (T)
+QOption: Books
+QOption: Pictures (T)
+%%
+QName: Question #60
+QDifficulty: 3
+QType: 1
+QMark: 10
+QText: The computer scientest who proved that a general algorithm to solve the halting problem for all possible program-input pairs cannot exist is
+QOption: Charles Babbage
+QOption: John von Neumann
+QOption: Grace Hopper
+QOption: Alan Turing (T)
+%%
+QName: test
+QDifficulty: 1
+QType: 1
+QMark: 1
+QText: test
+QOption: 1 (T)
+QOption: 1
+%%

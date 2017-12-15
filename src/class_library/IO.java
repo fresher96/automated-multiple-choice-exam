@@ -18,7 +18,7 @@ import java.util.ArrayList;
  */
 public class IO {
     
-    private static String fileName = "src\\database\\qb_test";
+    private static String fileName = "src\\database\\question_bank";
     
     private IO(){
         
@@ -107,6 +107,16 @@ public class IO {
                 list.add(q);
             }
             return list;
+        }
+        catch(FileNotFoundException ex){
+            String message = "question bank file was not found!\n";
+            message += "make sure to place it in the project folder\n";
+            message += "under: src\\database\\\n";
+            message += "and name it 'question_bank'";
+            
+            Handler.err(message);
+            System.exit(0);
+            return null;
         }
         catch(Exception e) {
             Handler.exc(e);

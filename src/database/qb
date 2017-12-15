@@ -1,0 +1,57 @@
+QName: the best programming language
+QDifficulty: 1
+QType: 1
+QMark: 50
+QText: what is the best programming language?
+QOption: java
+QOption: C#
+QOption: C++
+QOption: C
+QOption: no such thing as the best programming language (T)
+%%
+QName: C# > java
+QDifficulty: 1
+QType: 1
+QMark: 50
+QText: which is better?
+QOption: java
+QOption: C# (T)
+QOption: they are equal
+%%
+QName: android
+QDifficulty: 1
+QType: 2
+QMark: 50
+QText: programming languages used to develop android
+QOption: java (T)
+QOption: C
+QOption: C++
+QOption: kotlin (T)
+QOption: C#
+QOption: php
+QOption: lisp
+QOption: pascal
+QOption: go (T)
+%%
+QName: facebook
+QDifficulty: 1
+QType: 2
+QMark: 50
+QText: programming languages used to develop facebook
+QOption: java
+QOption: C#
+QOption: php (T)
+QOption: C
+QOption: python
+%%
+QName: breaking bad
+QDifficulty: 1
+QType: 1
+QMark: 50
+QText: what's my name?!
+QOption: whattt....
+QOption: nigga
+QOption: jessy pinkman
+QOption: heisnberg (T)
+QOption: don't know
+%%
