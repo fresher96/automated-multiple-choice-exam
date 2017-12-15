@@ -135,10 +135,7 @@ public class ExamChooser extends javax.swing.JFrame {
 
     void shuffle(ArrayList<Question> ques, int nbr){
         Collections.shuffle(ques);
-        // todostuff
-        for(int i=ques.size()-1; i>=nbr; i--) ques.remove(i);
-//        ques = (ArrayList<Question>) ques.subList(0, nbr);
-//        Handler.debug(ques.size());
+        ques.removeAll( ques.subList(nbr, ques.size()) );
     }
     /**
      * @param args the command line arguments

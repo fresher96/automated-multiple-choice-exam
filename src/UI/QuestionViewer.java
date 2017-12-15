@@ -4,7 +4,7 @@
  */
 package UI;
 
-import class_library.PanelGen;
+import class_library.Gen;
 import class_library.Question;
 import java.awt.Component;
 import java.util.ArrayList;
@@ -39,7 +39,8 @@ public class QuestionViewer extends javax.swing.JFrame {
         lblQues.setText(q.text);
         
         chk = new ArrayList<>();
-        JPanel pnl = PanelGen.getPnl(q, chk);
+        Gen.getChk(q, chk, new ArrayList<Boolean>());
+        JPanel pnl = Gen.getPnl(Gen.cast(chk));
         scrl.setViewportView(pnl);
     }
 

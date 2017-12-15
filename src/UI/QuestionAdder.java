@@ -21,8 +21,8 @@ public class QuestionAdder extends javax.swing.JFrame {
             lblOpt.add(new JLabel("opt" + (i+1)));
         }
         
-        JPanel pnl = PanelGen.getPnl(PanelGen.cast(lblOpt), PanelGen.cast(txtOpt),
-                                     PanelGen.cast(chkOpt), PanelGen.cast(btnOpt));
+        JPanel pnl = Gen.getPnl(Gen.cast(lblOpt), Gen.cast(txtOpt),
+                                     Gen.cast(chkOpt), Gen.cast(btnOpt));
         
         scrl.setViewportView(pnl);
     }
@@ -32,6 +32,7 @@ public class QuestionAdder extends javax.swing.JFrame {
         setLocationRelativeTo(null);
         setVisible(true);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
+        setTitle("add a new question to questions bank");
         
         // add two default options
         btnAddOptActionPerformed(null);
@@ -236,7 +237,13 @@ public class QuestionAdder extends javax.swing.JFrame {
 
         if(type == Question.SINGLE && corrCount != 1)
         {
-            Handler.err("there should be exactly one correct answer for this question");
+            Handler.err("there should be exactly one correct answer for questions of type 1");
+            return;
+        }
+        
+        if(type == Question.MULTIPLE && corrCount == 0)
+        {
+            Handler.err("there should be at least one correct answer for questions of type 2");
             return;
         }
         
