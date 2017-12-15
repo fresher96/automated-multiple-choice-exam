@@ -25,14 +25,14 @@ import javax.swing.JToggleButton;
  */
 public class Gen {
 
+    private Gen(){
+        
+    }
+    
     private static void addCentered(Box tmph, Component cpt) {
         tmph.add(Box.createHorizontalGlue());
         tmph.add(cpt);
         tmph.add(Box.createHorizontalGlue());
-    }
-    
-    private Gen(){
-        
     }
     
     public static JPanel getPnl(ArrayList<Component>... params){
@@ -57,66 +57,16 @@ public class Gen {
         return pnl;
     }
     
-    public static void getChk(Question q, ArrayList<JToggleButton> chk, ArrayList<Boolean> isCor){
-        
-        // shuffling options
-        ArrayList<Integer> idx = new ArrayList<>();
-        for(int i=0; i<q.opt.size(); i++) {
-            idx.add(i);
-        }
-        Collections.shuffle(idx);
-        
-        
-        ButtonGroup grp = new ButtonGroup();
-        for(int j=0; j<idx.size(); j++)
-        {
-            int i = idx.get(j);
-            
-            JToggleButton btn;
-            if(q.type == 1){
-                btn = new JRadioButton();
-                grp.add(btn);
-            }
-            else{
-                btn = new JCheckBox();
-            }
-            btn.setText(q.opt.get(i));
-            
-            chk.add(btn);
-            isCor.add(q.isCor.get(i));
-        }
-        
-    }
-    
     public static <T extends Component> ArrayList<Component> cast(ArrayList<T> lst){
-        ArrayList<Component> ret = new ArrayList<>();
+        ArrayList<Component> ret = new ArrayList<>(lst.size());
         for(T t : lst){
             ret.add(t);
         }
         return ret;
     }
     
-    public static JPanel examPnl(){
-        
-        JPanel pnl = new JPanel(new BorderLayout());
-        
-        
-        JPanel subPnl = new JPanel(new BorderLayout());
-        subPnl.add(new JLabel("label"), BorderLayout.PAGE_START);
-        subPnl.add(new JScrollPane(), BorderLayout.CENTER);
-        subPnl.add(new JButton("button"), BorderLayout.SOUTH);
-        
-        pnl.add(new JScrollPane(), BorderLayout.CENTER);
-        pnl.add(subPnl, BorderLayout.CENTER);
-        
-        pnl.add(new JButton("button"), BorderLayout.SOUTH);
-        
-        return subPnl;
-    }
-    
-    
     public static JPanel examPnl(JLabel lbl, JScrollPane scrlQues, JScrollPane scrlOpt,
-                                 JButton btnValidate, JButton btnSubmit) {
+                                 JButton btnValidate, JButton btnSubmit, JLabel lblScr, JLabel lblHint) {
         
         // create options stuff
         Box tmpv = Box.createVerticalBox();
@@ -146,6 +96,15 @@ public class Gen {
         addCentered(hor, btnSubmit);
         ver.add(Box.createVerticalStrut(25));
         ver.add(hor);
+        
+        hor = Box.createHorizontalBox();
+        addCentered(hor, lblScr);
+        ver.add(hor);
+        
+        hor = Box.createHorizontalBox();
+        addCentered(hor, lblHint);
+        ver.add(hor);
+        ver.add(Box.createVerticalStrut(10));
         // end
         
         JPanel pnl = new JPanel();
@@ -153,4 +112,62 @@ public class Gen {
         pnl.add(ver, BorderLayout.CENTER);
         return pnl;
     }
+    
+    
+    public static void group(ArrayList<JToggleButton> chk){
+        ButtonGroup grp = new ButtonGroup();
+        for(JToggleButton btn : chk){
+            grp.add(btn);
+        }
+    }
+    
+    public static void createOptions(Question q, ArrayList<JToggleButton> chk, ArrayList<Boolean> isCor){
+        
+        // shuffling options
+        ArrayList<Integer> idx = new ArrayList<>(q.opt.size());
+        for(int i=0; i<q.opt.size(); i++) {
+            idx.add(i);
+        }
+        Collections.shuffle(idx);
+        
+        
+        boolean isRadio = q.type == Question.SINGLE;
+        for(int j=0; j<idx.size(); j++)
+        {
+            int i = idx.get(j);
+            
+            JToggleButton btn = isRadio? new JRadioButton() : new JCheckBox();
+            btn.setText(q.opt.get(i));
+            
+            chk.add(btn);
+            isCor.add(q.isCor.get(i));
+        }
+        
+        if(isRadio) {
+            group(chk);
+        }
+    }
+    
+    public static ArrayList <JToggleButton> clone(ArrayList <JToggleButton> chk){
+        
+        ArrayList <JToggleButton> ret = new ArrayList<>(chk.size());
+        boolean isRadio = chk.get(0) instanceof JRadioButton;
+        
+        for(JToggleButton btn : chk)
+        {
+            JToggleButton clone = isRadio? new JRadioButton() : new JCheckBox();
+            
+            clone.setText(btn.getText());
+            clone.setSelected(btn.isSelected());
+            
+            ret.add( clone );
+        }
+        
+        if(isRadio){
+            group(ret);
+        }
+        
+        return ret;
+    }
+    
 }

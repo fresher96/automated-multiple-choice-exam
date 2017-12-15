@@ -116,7 +116,7 @@ public class ExamChooser extends javax.swing.JFrame {
         if(nbr == null) return;
         if( nbr <= 0 )
         {
-            Handler.err("number of questions must have be a positive integer");
+            Handler.err("number of questions must be a positive integer");
             return;
         }
         

@@ -38,8 +38,8 @@ public class QuestionViewer extends javax.swing.JFrame {
         setTitle(q.name);
         lblQues.setText(q.text);
         
-        chk = new ArrayList<>();
-        Gen.getChk(q, chk, new ArrayList<Boolean>());
+        chk = new ArrayList<>(q.opt.size());
+        Gen.createOptions(q, chk, new ArrayList<Boolean>(q.opt.size()));
         JPanel pnl = Gen.getPnl(Gen.cast(chk));
         scrl.setViewportView(pnl);
     }
@@ -105,7 +105,7 @@ public class QuestionViewer extends javax.swing.JFrame {
 
     private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
 
-        ArrayList <Integer> lst = new ArrayList<>();
+        ArrayList <Integer> lst = new ArrayList<>(chk.size());
         for(int i=0; i<chk.size(); i++)
         {
             if(chk.get(i).isSelected()) {

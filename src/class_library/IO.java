@@ -11,7 +11,6 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.util.ArrayList;
-import javax.swing.JOptionPane;
 
 /**
  *
@@ -19,9 +18,9 @@ import javax.swing.JOptionPane;
  */
 public class IO {
     
-    private static String fileName = "src\\database\\question_bank";
+    private static String fileName = "src\\database\\qb_test";
     
-    private void IO(){
+    private IO(){
         
     }
     
@@ -72,8 +71,8 @@ public class IO {
         line = line.replaceFirst("QText:", "").trim();
         q.text = line;
         
-        ArrayList<String> opt = new ArrayList();
-        ArrayList<Boolean> isCor = new ArrayList();
+        ArrayList<String> opt = new ArrayList<>();
+        ArrayList<Boolean> isCor = new ArrayList<>();
         while(true)
         {
             line = input.readLine();
@@ -100,7 +99,7 @@ public class IO {
         
         try( DataInputStream input = new DataInputStream( new FileInputStream(fileName) ) )
         {
-            ArrayList<Question> list = new ArrayList();
+            ArrayList<Question> list = new ArrayList<>();
             while(input.available() > 0)
             {
                 Question q = readNextQuestion(input);

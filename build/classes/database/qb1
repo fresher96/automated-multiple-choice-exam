@@ -1,0 +1,725 @@
+QName: Hard1
+QDifficulty: 3
+QType: 2
+QMark: 50
+QText: Hard1
+QOption: H1
+QOption: H2 (T)
+QOption: H3 (T)
+QOption: H4
+QOption: H5
+%%
+QName: Hard2
+QDifficulty: 3
+QType: 1
+QMark: 50
+QText: Hard2
+QOption: H1
+QOption: H2 (T)
+QOption: H3
+QOption: H4
+%%
+QName: Hard3
+QDifficulty: 3
+QType: 1
+QMark: 50
+QText: Hard3
+QOption: H1
+QOption: H2 (T)
+QOption: H3
+QOption: H4
+%%
+QName: Hard30
+QDifficulty: 3
+QType: 1
+QMark: 50
+QText: Hard3
+QOption: H1
+QOption: H2 (T)
+QOption: H3
+QOption: H4
+%%
+QName: Hard4
+QDifficulty: 3
+QType: 1
+QMark: 50
+QText: Hard4
+QOption: H1 (T)
+QOption: H2
+QOption: H3
+QOption: H4
+%%
+QName: Meduim1
+QDifficulty: 2
+QType: 1
+QMark: 50
+QText: Meduim1
+QOption: M1
+QOption: M2 (T)
+QOption: M3
+%%
+QName: Meduim2
+QDifficulty: 2
+QType: 2
+QMark: 50
+QText: Meduim2
+QOption: M1
+QOption: M2 (T)
+QOption: M3 (T)
+QOption: M4
+%%
+QName: Meduim3
+QDifficulty: 2
+QType: 1
+QMark: 50
+QText: Meduim1
+QOption: M1
+QOption: M2
+QOption: M3
+%%
+QName: Meduim4
+QDifficulty: 2
+QType: 2
+QMark: 50
+QText: Meduim2
+QOption: M1
+QOption: M2 (T)
+QOption: M3 (T)
+QOption: M4
+%%
+QName: Easy1
+QDifficulty: 1
+QType: 1
+QMark: 50
+QText: Easy1
+QOption: E1
+QOption: E1 (T)
+QOption: E1
+QOption: E1
+QOption: E1
+%%
+QName: Easy2
+QDifficulty: 1
+QType: 2
+QMark: 50
+QText: Easy2
+QOption: E2 (T)
+QOption: E2 (T)
+QOption: E2
+%%
+QName: Easy3
+QDifficulty: 1
+QType: 1
+QMark: 50
+QText: Easy3
+QOption: E3
+QOption: E3 (T)
+QOption: E3
+QOption: E3
+QOption: E3
+%%
+QName: E4
+QDifficulty: 1
+QType: 1
+QMark: 50
+QText: E4
+QOption: E4
+QOption: E4 (T)
+QOption: E4
+QOption: E4
+QOption: E4
+%%
+QName: E5
+QDifficulty: 1
+QType: 1
+QMark: 50
+QText: E5
+QOption: E5dsa
+QOption: E5ads (T)
+QOption: E5
+QOption: E5
+QOption: E5
+%%
+QName: Hard1
+QDifficulty: 3
+QType: 2
+QMark: 50
+QText: Hard1
+QOption: H1d
+QOption: H2 (T)
+QOption: H3sa (T)
+QOption: H4x
+QOption: H5
+%%
+QName: Hard2
+QDifficulty: 3
+QType: 1
+QMark: 50
+QText: Hard2
+QOption: H1
+QOption: H2 (T)
+QOption: H3
+QOption: H4
+%%
+QName: Hard3
+QDifficulty: 3
+QType: 1
+QMark: 50
+QText: Hard3
+QOption: H1h
+QOption: H2 (T)
+QOption: H3fs
+QOption: H4
+%%
+QName: Hard30
+QDifficulty: 3
+QType: 1
+QMark: 50
+QText: Hard3
+QOption: H1
+QOption: H2 (T)
+QOption: H3
+QOption: H4
+%%
+QName: Hard4
+QDifficulty: 3
+QType: 1
+QMark: 50
+QText: Hard4
+QOption: H1 (T)
+QOption: H2
+QOption: H3
+QOption: H4
+%%
+QName: Meduim1
+QDifficulty: 2
+QType: 1
+QMark: 50
+QText: Meduim1
+QOption: M1
+QOption: M2 (T)
+QOption: M3
+%%
+QName: Meduim2
+QDifficulty: 2
+QType: 2
+QMark: 50
+QText: Meduim2
+QOption: M1
+QOption: M2 (T)
+QOption: M3 (T)
+QOption: M4
+%%
+QName: Meduim3
+QDifficulty: 2
+QType: 1
+QMark: 50
+QText: Meduim1
+QOption: M1
+QOption: M2
+QOption: M3
+%%
+QName: Meduim4
+QDifficulty: 2
+QType: 2
+QMark: 50
+QText: Meduim2
+QOption: M1
+QOption: M2 (T)
+QOption: M3 (T)
+QOption: M4
+%%
+QName: Easy1
+QDifficulty: 1
+QType: 1
+QMark: 50
+QText: Easy1
+QOption: E1d
+QOption: E1 (T)
+QOption: E1d
+QOption: E1s
+QOption: E1s
+%%
+QName: Easy2
+QDifficulty: 1
+QType: 2
+QMark: 50
+QText: Easy2
+QOption: E2 (T)
+QOption: E2 (T)
+QOption: E2
+%%
+QName: Easy3
+QDifficulty: 1
+QType: 1
+QMark: 50
+QText: Easy3
+QOption: E3d
+QOption: E3v (T)
+QOption: E3cx
+QOption: E3z
+QOption: E3c
+%%
+QName: E4
+QDifficulty: 1
+QType: 1
+QMark: 50
+QText: E4
+QOption: E4x
+QOption: E4c (T)
+QOption: E4x
+QOption: E4c
+QOption: E4
+%%
+QName: E5
+QDifficulty: 1
+QType: 1
+QMark: 50
+QText: E5
+QOption: E5
+QOption: E5x (T)
+QOption: E5c
+QOption: E5v
+QOption: E5
+%%
+QName: Hard1
+QDifficulty: 3
+QType: 2
+QMark: 50
+QText: Hard1
+QOption: H1
+QOption: H2 (T)
+QOption: H3 (T)
+QOption: H4
+QOption: H5
+%%
+QName: Hard2
+QDifficulty: 3
+QType: 1
+QMark: 50
+QText: Hard2
+QOption: H1
+QOption: H2 (T)
+QOption: H3
+QOption: H4
+%%
+QName: Hard3
+QDifficulty: 3
+QType: 1
+QMark: 50
+QText: Hard3
+QOption: H1
+QOption: H2 (T)
+QOption: H3
+QOption: H4
+%%
+QName: Hard30
+QDifficulty: 3
+QType: 1
+QMark: 50
+QText: Hard3
+QOption: H1
+QOption: H2 (T)
+QOption: H3
+QOption: H4
+%%
+QName: Hard4
+QDifficulty: 3
+QType: 1
+QMark: 50
+QText: Hard4
+QOption: H1 (T)
+QOption: H2
+QOption: H3
+QOption: H4
+%%
+QName: Meduim1
+QDifficulty: 2
+QType: 1
+QMark: 50
+QText: Meduim1
+QOption: M1
+QOption: M2 (T)
+QOption: M3
+%%
+QName: Meduim2
+QDifficulty: 2
+QType: 2
+QMark: 50
+QText: Meduim2
+QOption: M1
+QOption: M2 (T)
+QOption: M3 (T)
+QOption: M4
+%%
+QName: Meduim3
+QDifficulty: 2
+QType: 1
+QMark: 50
+QText: Meduim1
+QOption: M1
+QOption: M2
+QOption: M3
+%%
+QName: Meduim4
+QDifficulty: 2
+QType: 2
+QMark: 50
+QText: Meduim2
+QOption: M1
+QOption: M2 (T)
+QOption: M3 (T)
+QOption: M4
+%%
+QName: Easy1
+QDifficulty: 1
+QType: 1
+QMark: 50
+QText: Easy1
+QOption: E1
+QOption: E1 (T)
+QOption: E1
+QOption: E1
+QOption: E1
+%%
+QName: Easy2
+QDifficulty: 1
+QType: 2
+QMark: 50
+QText: Easy2
+QOption: E2c (T)
+QOption: E2x (T)
+QOption: E2x
+%%
+QName: Easy3
+QDifficulty: 1
+QType: 1
+QMark: 50
+QText: Easy3
+QOption: E3
+QOption: E3 (T)
+QOption: E3
+QOption: E3
+QOption: E3
+%%
+QName: E4
+QDifficulty: 1
+QType: 1
+QMark: 50
+QText: E4
+QOption: E4
+QOption: E4 (T)
+QOption: E4
+QOption: E4
+QOption: E4
+%%
+QName: E5
+QDifficulty: 1
+QType: 1
+QMark: 50
+QText: E5
+QOption: E5cc
+QOption: E5cc (T)
+QOption: E5cc
+QOption: E5cc
+QOption: E5
+%%
+QName: Hard1
+QDifficulty: 3
+QType: 2
+QMark: 50
+QText: Hard1
+QOption: H1
+QOption: H2 (T)
+QOption: H3 (T)
+QOption: H4
+QOption: H5
+%%
+QName: Hard2
+QDifficulty: 3
+QType: 1
+QMark: 50
+QText: Hard2
+QOption: H1
+QOption: H2 (T)
+QOption: H3
+QOption: H4
+%%
+QName: Hard3
+QDifficulty: 3
+QType: 1
+QMark: 50
+QText: Hard3
+QOption: H1
+QOption: H2 (T)
+QOption: H3
+QOption: H4
+%%
+QName: Hard30
+QDifficulty: 3
+QType: 1
+QMark: 50
+QText: Hard3
+QOption: H1
+QOption: H2 (T)
+QOption: H3
+QOption: H4
+%%
+QName: Hard4
+QDifficulty: 3
+QType: 1
+QMark: 50
+QText: Hard4
+QOption: H1 (T)
+QOption: H2
+QOption: H3
+QOption: H4
+%%
+QName: Meduim1
+QDifficulty: 2
+QType: 1
+QMark: 50
+QText: Meduim1
+QOption: M1
+QOption: M2 (T)
+QOption: M3
+%%
+QName: Meduim2
+QDifficulty: 2
+QType: 2
+QMark: 50
+QText: Meduim2
+QOption: M1
+QOption: M2 (T)
+QOption: M3 (T)
+QOption: M4
+%%
+QName: Meduim3
+QDifficulty: 2
+QType: 1
+QMark: 50
+QText: Meduim1
+QOption: M1
+QOption: M2
+QOption: M3
+%%
+QName: Meduim4
+QDifficulty: 2
+QType: 2
+QMark: 50
+QText: Meduim2
+QOption: M1
+QOption: M2 (T)
+QOption: M3 (T)
+QOption: M4
+%%
+QName: Easy1
+QDifficulty: 1
+QType: 1
+QMark: 50
+QText: Easy1
+QOption: E1
+QOption: E1 (T)
+QOption: E1
+QOption: E1
+QOption: E1
+%%
+QName: Easy2
+QDifficulty: 1
+QType: 2
+QMark: 50
+QText: Easy2
+QOption: E2ghj (T)
+QOption: E2ghj (T)
+QOption: E2x
+%%
+QName: Easy3
+QDifficulty: 1
+QType: 1
+QMark: 50
+QText: Easy3
+QOption: E3xcv
+QOption: E3xv (T)
+QOption: E3xcv
+QOption: E3
+QOption: E3xcv
+%%
+QName: E4
+QDifficulty: 1
+QType: 1
+QMark: 50
+QText: E4
+QOption: E4cc
+QOption: E4 (T)
+QOption: E4xv
+QOption: E4
+QOption: E4x
+%%
+QName: E5
+QDifficulty: 1
+QType: 1
+QMark: 50
+QText: E5
+QOption: E5cx
+QOption: E5x (T)
+QOption: E5
+QOption: E5cx
+QOption: E5
+%%
+QName: Last1
+QDifficulty: 2
+QType: 1
+QMark: 50
+QText: last
+QOption: l
+QOption: l
+QOption: l
+QOption: l
+QOption: l
+%%
+QName: l2
+QDifficulty: 2
+QType: 2
+QMark: 50
+QText: l2
+QOption: l2
+QOption: l2 (T)
+QOption: l2 (T)
+QOption: l2 (T)
+QOption: l2
+%%
+QName: add
+QDifficulty: 2
+QType: 1
+QMark: 50
+QText: ad
+QOption: ad
+QOption: ad
+QOption: ad (T)
+QOption: ad
+%%
+QName: asd
+QDifficulty: 3
+QType: 2
+QMark: 50
+QText: asdasd
+QOption: asd
+QOption: asd (T)
+QOption: asd (T)
+QOption: asd
+QOption: ad
+%%
+QName: aaaaaaa
+QDifficulty: 2
+QType: 2
+QMark: 50
+QText: aaaaaaa
+QOption: aaaaaa (T)
+QOption: aaaaaaaaaaaaaaa (T)
+QOption: aaaaaaaa
+%%
+QName: asddas
+QDifficulty: 2
+QType: 1
+QMark: 50
+QText: bbjbjkb
+QOption: jbk
+QOption: jhvjhv
+QOption: bjkbkj
+%%
+QName: ADD
+QDifficulty: 1
+QType: 1
+QMark: 50
+QText: ad
+QOption: ad
+QOption: ad
+QOption: ad
+QOption: ad (T)
+%%
+QName: ADD2
+QDifficulty: 1
+QType: 1
+QMark: 50
+QText: ad
+QOption: ad123
+QOption: ad123
+QOption: ad13
+QOption: ad (T)
+%%
+QName: ADD3
+QDifficulty: 1
+QType: 1
+QMark: 50
+QText: ad21
+QOption: ad13
+QOption: ad123
+QOption: ad12
+QOption: ad (T)
+%%
+QName: ADD
+QDifficulty: 1
+QType: 2
+QMark: 50
+QText: ad
+QOption: adsd
+QOption: adasd
+QOption: adasd (T)
+QOption: adasd
+QOption: adsd
+QOption: adasd
+QOption: adasd (T)
+QOption: adasd
+QOption: adsd
+QOption: adasd
+QOption: adasd (T)
+QOption: adasd
+QOption: adsd
+QOption: adasd
+QOption: adasd (T)
+QOption: adasd
+QOption: adsd
+QOption: adasd
+QOption: adasd (T)
+QOption: adasd
+QOption: adsd
+QOption: adasd
+QOption: adasd (T)
+QOption: adasd
+QOption: adsd
+QOption: adasd
+QOption: adasd (T)
+QOption: adasd
+QOption: adsd
+QOption: adasd
+QOption: adasd (T)
+QOption: adasd
+QOption: adsd
+QOption: adasd
+QOption: adasd (T)
+QOption: adasd
+QOption: adsd
+QOption: adasd
+QOption: adasd (T)
+QOption: adasd
+QOption: adsd
+QOption: adasd
+QOption: adasd (T)
+QOption: adasd
+QOption: adsd
+QOption: adasd
+QOption: adasd (T)
+QOption: adasd
+QOption: adsd
+QOption: adasd
+QOption: adasd (T)
+QOption: adasd
+QOption: adsd
+QOption: adasd
+QOption: adasd (T)
+QOption: adasd
+QOption: adsd
+QOption: adasd
+QOption: adasd (T)
+QOption: adasd
+%%

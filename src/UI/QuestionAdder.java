@@ -1,7 +1,6 @@
 package UI;
 
 import class_library.*;
-import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -10,13 +9,13 @@ import javax.swing.*;
 public class QuestionAdder extends javax.swing.JFrame {
     
     // options variables
-    ArrayList<JTextField> txtOpt = new ArrayList();
-    ArrayList<JCheckBox> chkOpt = new ArrayList();
-    ArrayList<JButton> btnOpt = new ArrayList();
+    ArrayList<JTextField> txtOpt = new ArrayList<>();
+    ArrayList<JCheckBox> chkOpt = new ArrayList<>();
+    ArrayList<JButton> btnOpt = new ArrayList<>();
     
     void updateOptions(){
         
-        ArrayList<JLabel> lblOpt = new ArrayList<>();
+        ArrayList<JLabel> lblOpt = new ArrayList<>(txtOpt.size());
         for(int i=0; i<txtOpt.size(); i++){
             lblOpt.add(new JLabel("opt" + (i+1)));
         }
@@ -214,8 +213,8 @@ public class QuestionAdder extends javax.swing.JFrame {
         }
         
         // handling options
-        ArrayList<String> opt = new ArrayList();
-        ArrayList<Boolean> isCor = new ArrayList();
+        ArrayList<String> opt = new ArrayList<>(txtOpt.size());
+        ArrayList<Boolean> isCor = new ArrayList<>(txtOpt.size());
         int corrCount = 0;
         for(int i=0; i<txtOpt.size(); i++){
             opt.add( txtOpt.get(i).getText() );

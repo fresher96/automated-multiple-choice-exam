@@ -1,0 +1,60 @@
+QName: test
+QDifficulty: 1
+QType: 1
+QMark: 50
+QText: question for testing.
+QOption: a
+QOption: b (T)
+QOption: c
+QOption: d
+%%
+QName: test
+QDifficulty: 1
+QType: 1
+QMark: 50
+QText: question for testing.
+QOption: a
+QOption: b (T)
+QOption: c
+QOption: d
+%%
+QName: test
+QDifficulty: 1
+QType: 1
+QMark: 50
+QText: question for testing.
+QOption: a
+QOption: b (T)
+QOption: c
+QOption: d
+%%
+QName: test
+QDifficulty: 1
+QType: 1
+QMark: 50
+QText: question for testing.
+QOption: a
+QOption: b (T)
+QOption: c
+QOption: d
+%%
+QName: test
+QDifficulty: 1
+QType: 1
+QMark: 50
+QText: question for testing.
+QOption: a
+QOption: b (T)
+QOption: c
+QOption: d
+%%
+QName: test
+QDifficulty: 1
+QType: 2
+QMark: 50
+QText: question for testing.
+QOption: a
+QOption: b (T)
+QOption: c
+QOption: d
+%%

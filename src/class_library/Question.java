@@ -11,7 +11,8 @@ import java.util.ArrayList;
  * @author Farouk
  */
 public class Question {
-//    static final int EASY = 1, MEDIUM = 2, HARD = 3;
+    
+    static final int EASY = 1, MEDIUM = 2, HARD = 3;
     public static final int SINGLE = 1, MULTIPLE = 2;
     
     public String name, text;
@@ -76,4 +77,5 @@ public class Question {
         this.mark = mark;
         return true;
     }
+    
 }

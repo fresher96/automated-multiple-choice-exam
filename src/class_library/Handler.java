@@ -13,7 +13,7 @@ import javax.swing.JPanel;
  */
 public class Handler {
     
-    private void Handler(){
+    private Handler(){
         
     }
     
@@ -52,4 +52,5 @@ public class Handler {
             return null;
         }
     }
+    
 }
