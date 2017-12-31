@@ -2,8 +2,9 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package UI;
+package MainFrames;
 
+import UI.Exam;
 import class_library.Handler;
 import class_library.IO;
 import class_library.Question;
@@ -23,6 +24,7 @@ public class ExamChooser extends javax.swing.JFrame {
         initComponents();
         setLocationRelativeTo(null);
         setResizable(false);
+        setVisible(true);
     }
 
     /**

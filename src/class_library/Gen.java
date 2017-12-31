@@ -159,6 +159,7 @@ public class Gen {
             
             clone.setText(btn.getText());
             clone.setSelected(btn.isSelected());
+            clone.setEnabled(btn.isEnabled());
             
             ret.add( clone );
         }

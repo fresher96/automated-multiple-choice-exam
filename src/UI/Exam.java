@@ -4,9 +4,10 @@
  */
 package UI;
 
-import class_library.Handler;
 import class_library.Gen;
+import class_library.Handler;
 import class_library.Question;
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
@@ -24,6 +25,7 @@ public class Exam extends javax.swing.JFrame {
     ArrayList< ArrayList<JToggleButton> > chks;
     ArrayList<JToggleButton> curChk;
     ArrayList< ArrayList<Boolean> > cors;
+    ArrayList <JButton> btns;
     int curQues = -1;
     
     public Exam(){
@@ -64,7 +66,7 @@ public class Exam extends javax.swing.JFrame {
     
     void populateQuestions(){
         
-        ArrayList <JButton> btns = new ArrayList<>(ques.size());
+        btns = new ArrayList<>(ques.size());
         for(int i=0; i<ques.size(); i++)
         {
             JButton btn = new JButton(String.format("Question %d: %s", i+1, ques.get(i).name));
@@ -223,10 +225,24 @@ public class Exam extends javax.swing.JFrame {
         
         totScr = Math.max(totScr, 0);
         lblScr.setText( String.format("your score is: %.2f%%", totScr) );
-        btnValidate.setEnabled(false);
-        btnSubmit.setEnabled(false);
+        
+        disableAll();
     }//GEN-LAST:event_btnSubmitActionPerformed
 
+    void disableAll(){
+        
+        btnValidate.setEnabled(false);
+        btnSubmit.setEnabled(false);
+        
+        for(ArrayList<JToggleButton> arr : chks){
+            for(JToggleButton btn : arr){
+                btn.setEnabled(false);
+            }
+        }
+        
+        populateOptions();
+    }
+    
     private void btnValidateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnValidateActionPerformed
         
         if(curQues == -1){
@@ -235,7 +251,12 @@ public class Exam extends javax.swing.JFrame {
         }
         
         chks.set( curQues, Gen.clone(curChk) );
-        Handler.not("your answer(s) are saved");
+        
+        
+        if(btns.get(curQues).getBackground() != Color.GREEN)
+            btns.get(curQues).setBackground(Color.GREEN);
+        else
+            Handler.not("your answer(s) are saved");
     }//GEN-LAST:event_btnValidateActionPerformed
 
     public static void main(String args[]) {

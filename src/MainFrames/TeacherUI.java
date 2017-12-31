@@ -2,8 +2,10 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package UI;
+package MainFrames;
 
+import UI.QuestionAdder;
+import UI.QuestionViewer;
 import class_library.Handler;
 import class_library.IO;
 import class_library.Question;
@@ -23,6 +25,7 @@ public class TeacherUI extends javax.swing.JFrame {
         initComponents();
         setLocationRelativeTo(null);
         setResizable(false);
+        setVisible(true);
     }
 
     /**
@@ -82,7 +85,7 @@ public class TeacherUI extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnTry)
                     .addComponent(btnAdd))
-                .addContainerGap(111, Short.MAX_VALUE))
+                .addContainerGap(82, Short.MAX_VALUE))
         );
 
         pack();
